@@ -7,6 +7,9 @@ This system helps manage a single building with role-based dashboards, apartment
 
 ## 🌐 Live URL
 👉 [Homex Live Link](https://homex-6e24e.web.app)
+---
+## 🌐 Related Repositories
+- **Frontend (Server):** [Homex Server Repo](https://github.com/nazmulrahat786/BUILDING-MANAGEMENT-SERVER/tree/main)
 
 ---
 
