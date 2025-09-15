@@ -14,7 +14,7 @@ const Apartment = () => {
   const totalApartments = 16; // Ideally, fetch this count from the server
   const totalPages = Math.ceil(totalApartments / perPageItem);
   const pageNumbers = [...Array(totalPages).keys()];
-
+ 
   const { data: apartments, isLoading } = useQuery({
     queryKey: ["pagination", currentPage, minRent, maxRent],
     queryFn: async () => {
