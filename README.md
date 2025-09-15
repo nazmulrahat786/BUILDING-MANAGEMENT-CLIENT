@@ -1,26 +1,71 @@
-# Live Link : [https://cool-sorbet-7b3b40.netlify.app](https://cool-sorbet-7b3b40.netlify.app) 
+# Homex (Building Management System)
 
-<h3>Admin email : <small >tazahmed12@gmail.com</small></h3>
-<h3>Admin Password : <small >123456</small></h3>
+A full-featured **Building Management System (BMS)** web application built with React (frontend) and Node.js/Express (backend).  
+This system helps manage a single building with role-based dashboards, apartment listings, agreement requests, payments, coupons, and announcements.
 
-#
+---
 
-<h2 align='center'>About This Project </h2>
+## 🌐 Live URL
+👉 [https://homexx.netlify.app/](https://homexx.netlify.app/)
 
-- It is a Building Manage Application
+---
 
-- Any user able to agreement for any room
+## 🎯 Purpose
+The purpose of this project is to create a **centralized platform** for building management where **admins, members, and users** can seamlessly interact.  
+It provides a secure environment to handle apartment agreements, manage members, post announcements, process payments, and offer discounts via coupons.
 
-- When user sent a agreement request then Admin see this request
+---
 
-- If Admin accept this request then he/she is the member of this house
+## 🚀 Key Features
+- 🔐 **Authentication** with JWT (Login, Register, Role-based access: admin, member, user).  
+- 🏠 **Apartments Management** – view available apartments, send/approve agreements.  
+- 👥 **Role-based Dashboards** – different UI and permissions for Admin, Member, and User.  
+- 📢 **Announcements Management** – admins can post/manage building announcements.  
+- 🎟️ **Coupon System** – create and apply coupons for discounts.  
+- 💳 **Payment Integration** – secure payment history and invoice generation.  
+- 📊 **Responsive UI** – clean and modern design with TailwindCSS & DaisyUI.  
+- ⚡ **TanStack Query** – optimized fetching and caching of data.  
+- 🛡️ **Protected Routes** – backend verifies JWT token and role for secure endpoints.  
 
-- If Admin removed his/her member ship then he can not access member profile
+---
 
-- In member Profile he/she payment for his/her rented room
+## 🔑 Admin Login Credentials
+To explore the **Admin Dashboard**, you can use the following credentials:
 
-- Member Also see his Payment History in Payment History page
+- **Email:** `rahat@gmail.com`  
+- **Password:** `Admin1234`  
 
+---
 
+## 📦 NPM Packages Used
 
+### Frontend
+- **react** – UI framework  
+- **react-router-dom** – routing  
+- **@tanstack/react-query** – data fetching & caching  
+- **axios** – API requests  
+- **tailwindcss** – styling  
+- **daisyui** – prebuilt components  
+- **framer-motion** – animations  
+- **react-hot-toast** – toast notifications  
+- **lucide-react** – icons  
+- **react-hook-form** – form handling  
+- **yup** – form validation schema  
+- **sweetalert2** – alerts & confirmations  
 
+### Backend
+- **express** – web server  
+- **cors** – cross-origin requests  
+- **dotenv** – environment variable management  
+- **jsonwebtoken (JWT)** – authentication  
+- **bcryptjs** – password hashing  
+- **mongodb** – database  
+- **morgan** – request logging  
+
+---
+
+## 📖 How to Run Locally
+1. Clone the repo  
+   ```bash
+   git clone https://github.com/your-username/homex.git
+   cd homex
