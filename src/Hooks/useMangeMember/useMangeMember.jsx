@@ -12,7 +12,7 @@ const useMangeMember = () => {
             return res.data
         }
     })
-   
+    
     return [totaluser, refetch,isLoading];
 };
 
