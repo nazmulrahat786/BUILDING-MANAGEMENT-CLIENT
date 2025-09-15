@@ -6,7 +6,7 @@ This system helps manage a single building with role-based dashboards, apartment
 ---
 
 ## 🌐 Live URL
-👉 [Homex](https://homex-6e24e.web.app)
+👉 [Homex Live Link](https://homex-6e24e.web.app)
 
 ---
 
