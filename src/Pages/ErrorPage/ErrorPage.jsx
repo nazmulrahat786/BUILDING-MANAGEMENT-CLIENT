@@ -16,7 +16,7 @@ const ErrorPage = () => {
       <p className="mt-2 text-gray-500 dark:text-gray-400 text-center max-w-md">
         The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
       </p>
-
+ 
       {/* Action buttons */}
       <div className="mt-6 flex gap-4">
         <Link to="/">
