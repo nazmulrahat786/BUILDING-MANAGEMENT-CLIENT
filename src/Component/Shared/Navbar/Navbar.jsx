@@ -66,8 +66,8 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="bg-gradient-to-r from-gray-900 to-gray-800 text-white shadow-lg sticky top-0 z-50">
-      <div className="container mx-auto flex items-center justify-between px-5 py-3">
+    <nav className="bg-gradient-to-r lg:min-w-full from-gray-900 to-gray-800 text-white shadow-lg sticky top-0 z-50 w-full">
+      <div className="w-full flex items-center justify-between px-5 lg:px-10 py-3">
         {/* Logo */}
         <a href="/" className="flex items-center gap-2">
           <img src={logo} alt="Logo" className="w-24 md:w-32" />
@@ -77,7 +77,7 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex items-center gap-4 text-md">
+        <ul className="hidden  lg:flex items-center gap-4 text-md">
           {navItem}
 
           {user ? (
@@ -90,7 +90,9 @@ const Navbar = () => {
               />
               {profileDropdownOpen && (
                 <div className="absolute right-0 mt-2 w-60 bg-gray-900 bg-opacity-95 text-white rounded-xl shadow-xl p-4 z-50">
-                  <h1 className="font-semibold text-lg mb-2">{user.displayName}</h1>
+                  <h1 className="font-semibold text-lg mb-2">
+                    {user.displayName}
+                  </h1>
                   <NavLink to="/dashboard">
                     <li className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 rounded-md py-2 px-3 mt-2 text-center cursor-pointer transition duration-300">
                       Dashboard

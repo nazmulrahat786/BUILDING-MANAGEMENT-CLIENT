@@ -5,12 +5,13 @@ import Footer from "../Component/Shared/Footer/Footer";
 const MainLayout = () => {
    
     return (
-        <div className="max-w-[1440px] mx-auto ">
+        <div className=" mx-auto  h-full">
             <Navbar></Navbar>
             <div className="min-h-[85vh]">
                 <Outlet></Outlet>
             </div>
             <Footer></Footer>
+            
 
         </div>
     );

@@ -7,19 +7,24 @@ import FeatureRoom from "../../Component/Home/feature/FeatureRoom";
 
 const Home = () => {
     return (
-        <div className="overflow-x-hidden" >
+        <div className="overflow-x-hidden " >
+           
             <Banner></Banner>
-           <div className="px-5 md:px-20">
+
+        <div className=" flex flex-col justify-center items-center">
+               <div className="px-5 max-w-[1440px] md:px-20">
            <About></About>
            </div>
            
-           <div className="px-5 md:px-20 mt-10 lg:mt-20">
+           <div className="px-5 max-w-[1440px] md:px-20 mt-10 lg:mt-20">
             <GoogleMap></GoogleMap>
            </div>
            
-            <FeatureRoom></FeatureRoom>
+            <div className="max-w-[1440px]"><FeatureRoom></FeatureRoom></div>
+            <div className="max-w-[1440px]"> <CuponButton></CuponButton></div>
            
-           <CuponButton></CuponButton>
+        </div>
+        
         </div>
     );
 };
