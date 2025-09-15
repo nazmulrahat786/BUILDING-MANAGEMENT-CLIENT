@@ -11,7 +11,7 @@ const useCupon = () => {
             const res = await axiosPubilc.get('/cupons')
             return res.data
 
-        }
+        } 
     })
     return [cupon, isPending, refetch]
 };
