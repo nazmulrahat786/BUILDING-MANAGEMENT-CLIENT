@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* --bg-primary: #0000 */
+    --bg-primary: #010836
+    /* --bg-primary: #030f5a */
+}
+
+body {
+    font-family: 'Lora', serif;
+    font-family: 'Open Sans', sans-serif;
+}

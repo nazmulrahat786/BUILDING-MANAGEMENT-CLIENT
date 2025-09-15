@@ -1,0 +1,18 @@
+/* CouponButton.css */
+
+.coupon-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: opacity 0.3s;
+    /* width: 200px; */
+  }
+  
+  .coupon-button.hidden {
+    opacity: 0;
+  }
+  
+  .coupon-button.visible {
+    opacity: 1;
+  }
+  
