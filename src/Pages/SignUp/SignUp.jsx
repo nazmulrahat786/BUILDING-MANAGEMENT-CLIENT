@@ -19,7 +19,7 @@ const handleSignUpForm = (e) => {
   const email = form.email.value;
   const photoUrl = form.photourl.value;
   const password = form.password.value;
-
+ 
   // Password validation: At least 6 chars, 1 uppercase, 1 lowercase
   const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
   if (!passwordRegex.test(password)) {
