@@ -3,7 +3,7 @@ import ApartmentCard from "./ApartmentCard";
 import useAxiosPublic from "../../Hooks/AxiosPublic/useAxiosPublic";
 import { useState } from "react";
 import Divider from "../../Component/Shared/Divider";
-
+  
 const Apartment = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const [minRent, setMinRent] = useState("");
