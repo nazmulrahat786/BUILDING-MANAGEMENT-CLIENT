@@ -1,5 +1,6 @@
 {
   "hosting": {
+     "site": "homex",      
     "public": "dist",
     "ignore": [
       "firebase.json",

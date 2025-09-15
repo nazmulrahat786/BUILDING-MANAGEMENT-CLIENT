@@ -1,26 +1,40 @@
 import { useQuery } from "@tanstack/react-query";
 import ApartmentCard from "./ApartmentCard";
 import useAxiosPublic from "../../Hooks/AxiosPublic/useAxiosPublic";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Divider from "../../Component/Shared/Divider";
+import { useNavigate } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth"; // your custom hook for auth
 
 const Apartment = () => {
   const [currentPage, setCurrentPage] = useState(0);
+  const [minRent, setMinRent] = useState("");
+  const [maxRent, setMaxRent] = useState("");
   const axiosPublic = useAxiosPublic();
+  const navigate = useNavigate();
+  const { user } = useAuth();
 
   const perPageItem = 6;
-  const totalApartments = 16; // Ideally, fetch this count from the server
+  const totalApartments = 16; // Ideally fetch count from backend
   const totalPages = Math.ceil(totalApartments / perPageItem);
   const pageNumbers = [...Array(totalPages).keys()];
 
+  // redirect if not logged in
+  useEffect(() => {
+    if (!user) {
+      navigate("/login");
+    }
+  }, [user, navigate]);
+
   const { data: apartments, isLoading, refetch } = useQuery({
-    queryKey: ["pagination", currentPage],
+    queryKey: ["pagination", currentPage, minRent, maxRent],
     queryFn: async () => {
       const res = await axiosPublic.get(
-        `/pagination?page=${currentPage}&size=${perPageItem}`
+        `/pagination?page=${currentPage}&size=${perPageItem}&minRent=${minRent}&maxRent=${maxRent}`
       );
       return res.data;
     },
+    enabled: !!user, // only run query if logged in
   });
 
   const handlePageChange = (page) => {
@@ -36,9 +50,38 @@ const Apartment = () => {
     if (currentPage < totalPages - 1) handlePageChange(currentPage + 1);
   };
 
+  const handleSearch = () => {
+    setCurrentPage(0); // reset to first page on new search
+    refetch();
+  };
+
   return (
     <div className="my-20 px-4 md:px-10">
       <Divider header="All Apartments" />
+
+      {/* Search Rent Range */}
+      <div className="flex flex-wrap justify-center items-center gap-4 mt-8">
+        <input
+          type="number"
+          placeholder="Min Rent"
+          value={minRent}
+          onChange={(e) => setMinRent(e.target.value)}
+          className="border border-gray-300 px-4 py-2 rounded-lg w-40"
+        />
+        <input
+          type="number"
+          placeholder="Max Rent"
+          value={maxRent}
+          onChange={(e) => setMaxRent(e.target.value)}
+          className="border border-gray-300 px-4 py-2 rounded-lg w-40"
+        />
+        <button
+          onClick={handleSearch}
+          className="px-6 py-2 bg-[#301ad5] text-white rounded-lg hover:bg-[#0d0357] transition"
+        >
+          Search
+        </button>
+      </div>
 
       {/* Apartments Grid */}
       {isLoading ? (
@@ -80,7 +123,6 @@ const Apartment = () => {
                 ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                 : "bg-[#301ad5] text-white hover:bg-[#0d0357]"
             }`}
-            aria-label="Previous Page"
           >
             Prev
           </button>
@@ -124,7 +166,6 @@ const Apartment = () => {
                 ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                 : "bg-[#301ad5] text-white hover:bg-[#0d0357]"
             }`}
-            aria-label="Next Page"
           >
             Next
           </button>
