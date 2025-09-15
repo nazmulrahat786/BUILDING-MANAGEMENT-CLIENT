@@ -184,6 +184,6 @@ const DashBoardLayOut = () => {
       </main>
     </div>
   );
-};
+}; 
 
 export default DashBoardLayOut;
