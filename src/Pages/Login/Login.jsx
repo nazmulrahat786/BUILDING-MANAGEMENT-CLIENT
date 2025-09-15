@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 import useAuth from '../../Hooks/useAuth';
 import useAxiosPublic from '../../Hooks/AxiosPublic/useAxiosPublic';
 import logo from '/mainlogo.png';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'; 
 
 const Login = () => {
   const { handleSignIn, handleGoogleSignIn } = useAuth();
