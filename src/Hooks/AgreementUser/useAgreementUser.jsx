@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import useAxiosSecure from '../AxiosSecure/useAxiosSecure'
-
+ 
 const useAgreementUser = () => {
     const axiosSecure=useAxiosSecure()
     // const{loader,setloader}=useState(true)
