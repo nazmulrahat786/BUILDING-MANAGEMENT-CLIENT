@@ -3,7 +3,7 @@ import About from "../../Component/Home/About/About";
 import Banner from "../../Component/Home/Banner/Banner";
 import CuponButton from "./CuponButton/CuponButton";
 import FeatureRoom from "../../Component/Home/feature/FeatureRoom";
-
+ 
 
 const Home = () => {
     return (
