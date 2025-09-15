@@ -3,7 +3,7 @@
 A full-featured **Building Management System (BMS)** web application built with React (frontend) and Node.js/Express (backend).  
 This system helps manage a single building with role-based dashboards, apartment listings, agreement requests, payments, coupons, and announcements.
 
---- 
+---  
 
 ## 🌐 Live URL
 👉 [Homex Live Link](https://homex-6e24e.web.app)
