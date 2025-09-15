@@ -32,8 +32,8 @@ It provides a secure environment to handle apartment agreements, manage members,
 ## 🔑 Admin Login Credentials
 To explore the **Admin Dashboard**, you can use the following credentials:
 
-- **Email:** `rahat@gmail.com`  
-- **Password:** `Admin1234`  
+- **Admin email:** `rahat@gmail.com`  
+- **Admin password** `Admin1234`  
 
 ---
 
