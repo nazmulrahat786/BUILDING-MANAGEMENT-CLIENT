@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import useAuth from '../useAuth';
 import useAxiosPublic from '../AxiosPublic/useAxiosPublic';
-
+ 
 const useAnnouncements = () => {
     const { loader } = useAuth();
     const axiosPubilc = useAxiosPublic()
