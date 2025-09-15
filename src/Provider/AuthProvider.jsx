@@ -6,7 +6,7 @@ import useAxiosPublic from '../Hooks/AxiosPublic/useAxiosPublic'
 export const AuthContext = createContext(null)
 // google provider
 const provider = new GoogleAuthProvider()
-const AuthProvider = ({ children }) => {
+const AuthProvider = ({ children }) => { 
     const axiosPublic=useAxiosPublic()
 
     const [user, setuser] = useState()
