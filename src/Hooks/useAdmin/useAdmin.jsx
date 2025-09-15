@@ -7,7 +7,7 @@ const useAdmin = () => {
     const axiosSecure=useAxiosSecure()
     // console.log(user?.email)
 //  con
-
+ 
     const {data:role , isPending}=useQuery({
         queryKey:[user?.email,'role'],
         enabled:!loader,
