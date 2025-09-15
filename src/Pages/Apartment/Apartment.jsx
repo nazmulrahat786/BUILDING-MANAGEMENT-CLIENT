@@ -24,7 +24,7 @@ const Apartment = () => {
       return res.data;
     },
   });
-
+ 
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
