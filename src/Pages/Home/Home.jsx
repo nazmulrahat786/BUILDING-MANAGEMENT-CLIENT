@@ -20,7 +20,7 @@ const Home = () => {
             <GoogleMap></GoogleMap>
            </div>
            
-            <div className="max-w-[1440px]"><FeatureRoom></FeatureRoom></div>
+            <div className=""><FeatureRoom></FeatureRoom></div>
             <div className="max-w-[1440px]"> <CuponButton></CuponButton></div>
            
         </div>
