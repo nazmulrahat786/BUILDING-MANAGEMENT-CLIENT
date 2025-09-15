@@ -21,4 +21,4 @@ const useApartment = () => {
     // }
     return [apartment, refetch,isPending];
 };
-export default useApartment;
+export default useApartment; 
