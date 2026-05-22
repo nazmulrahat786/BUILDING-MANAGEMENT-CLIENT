@@ -11,7 +11,7 @@ This system helps manage a single building with role-based dashboards, apartment
 ## 🌐 Related Repositories
 - **Frontend (Server):** [Homex Server Repo](https://github.com/nazmulrahat786/BUILDING-MANAGEMENT-SERVER/tree/main)
 
----
+--- 
 
 ## 🎯 Purpose
 The purpose of this project is to create a **centralized platform** for building management where **admins, members, and users** can seamlessly interact.  
